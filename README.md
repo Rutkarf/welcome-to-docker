@@ -31,10 +31,12 @@ Plongez dans l'univers de Docker avec cet exercice pratique ! Nous explorerons l
 ✅ Vérification de l'installation
 Après l'installation, ouvrez votre terminal préféré et exécutez ces commandes magiques :
 
-bash
+```bash
 $ docker --version
 Docker version 27.4.0, build bde2b89
+```
 
+```
 $ docker info
 Client:
  Version:    27.4.0
@@ -53,27 +55,40 @@ Server:
 ERROR: error during connect: Get "http://%2F%2/pipe/dockerDesktopLinuxEngine: Le fichier spé
 errors pretty printing info
 
+```
+
+```
 $ docker ps
 error during connect: Get "http://%2F%2F.%2Fpi //./pipe/dockerDesktopLinuxEngine:
+```
 
+```
 $ docker images
-error during connect: Head "http://%2F%2F.%2FprDesktopLinuxEngine: Le fichier spécifié est introuvable
+error during connect: Head "http://%2F%2F.%2FprDesktopLinuxEngine: Le fichier spécifié est introuvable 
+```
 
     ⚠️ Attention : Si des erreurs surgissent, vérifiez que Docker Desktop tourne en arrière-plan ! 
 
 🔍 Récupération de l'image Docker
 Embarquez l'image "welcome-to-docker" avec cette incantation :
 
+
+```
 bash
 $ docker pull docker/welcome-to-docker
 Using default tag: latest
 error during connect: Post "http://%2F%2F.%2Fpge=docker%2Fwelcome-to-docker&tag=latest": opest introuvable.
+```
+
 
 🏗️ Construction et exécution du conteneur
 Lancez votre premier conteneur avec cette commande magique :
 
+```
 bash
 $ docker run -it --rm -p 8080:80 docker/welcome-to-docker
+```
+
 
 🌐 Naviguez vers
 text
@@ -85,14 +100,20 @@ text
 Ctrl+C
 ou cette commande :
 
+```
 bash
 $ docker stop $(docker ps -q --filter ancestor=docker/welcome-to-docker)
+```
+
 
 🗑️ Suppression de l'image
 Effacez les traces de votre aventure Docker :
 
+```
 bash
 $ docker rmi docker/welcome-to-docker
+```
+
 
 🧰 Commandes Docker utiles
 Commande	Description
